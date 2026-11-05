@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="preloader-active">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - Stackly Yoga Coaching Platform</title>
+    <link rel="icon" type="image/webp" href="assets/top-logo.webp">
+    <link rel="apple-touch-icon" href="assets/top-logo.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sa-preloader" class="sa-preloader" aria-hidden="true">
+    <div class="sa-preloader__field"></div>
+    <div class="sa-preloader__core">
+        <div class="sa-preloader__lane"></div>
+        <div class="sa-preloader__lane sa-preloader__lane--mid"></div>
+        <div class="sa-preloader__lane sa-preloader__lane--inner"></div>
+        <div class="sa-preloader__runner"><span></span></div>
+        <div class="sa-preloader__ball"></div>
+        <div class="sa-preloader__mark">
+            <img src="assets/top-logo.webp" alt="Stackly">
+        </div>
+    </div>
+    <div class="sa-preloader__brand">
+        <span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span>
+    </div>
+    <p class="sa-preloader__tag">Awakening Mind, Body &amp; Prana</p>
+    <div class="sa-preloader__bar"><span></span></div>
+</div>
+
+<div class="auth-shell">
+    <div class="auth-brand">
+        <div class="auth-brand-header">
+            <a href="index.html" class="auth-logo-link">
+                <img src="assets/logo.webp" alt="Stackly Logo" style="height:48px;width:auto;">
+            </a>
+            <a href="index.html" class="auth-back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+        <div class="auth-brand-content">
+            <span class="highlight" style="font-weight:800;letter-spacing:2px;text-transform:uppercase;">
+                <i class="fas fa-om"></i> Join The Sangha
+            </span>
+            <h1>Begin Your <span class="highlight">Yogic Awakening</span></h1>
+            <p style="max-width:440px;">Create your Stackly account in under a minute to book shala sessions, track 3D posture alignment, and access guided pranayama.</p>
+        </div>
+        <div class="auth-brand-footer">
+            <div style="display:flex;align-items:center;gap:16px;">
+                <div style="display:flex;">
+                    <img src="assets/coach-meera.webp" alt="Acharya" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);">
+                    <img src="assets/coach-siddharth.webp" alt="Acharya" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);margin-left:-14px;">
+                    <img src="assets/coach-rohan.webp" alt="Acharya" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);margin-left:-14px;">
+                </div>
+                <span style="color:rgba(255,255,255,0.85);font-size:0.92rem;font-weight:600;">Join 5,000+ conscious yoga practitioners</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="auth-panel">
+        <div class="auth-card-box anim-zoom-in">
+            <div class="auth-card-header">
+                <a href="index.html" class="auth-logo-link">
+                    <img src="assets/logo.webp" alt="Stackly Logo" style="height:48px;width:auto;">
+                </a>
+                <a href="index.html" class="auth-back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+            <h2>Create Account</h2>
+            <p class="sub">Fill in your details to unlock your Member Dashboard.</p>
+
+            <form id="signupForm" novalidate>
+                <div class="form-group">
+                    <label for="suName">Full Name</label>
+                    <input type="text" id="suName" placeholder="Ananya Sundaram" required>
+                    <span class="form-error">Please enter your full name (at least 2 characters).</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="suEmail">Email Address</label>
+                    <input type="email" id="suEmail" placeholder="you@stackly.com" required>
+                    <span class="form-error">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="suPhone">Phone Number</label>
+                    <input type="tel" id="suPhone" placeholder="+91 98765 43210">
+                    <span class="form-error">Please enter a valid phone number.</span>
+                </div>
+
+                <div class="grid grid-2" style="gap:12px;">
+                    <div class="form-group">
+                        <label for="suSport">Primary Yoga Path</label>
+                        <select id="suSport" class="js-sa-select">
+                            <option>Classical Hatha Alignment</option>
+                            <option>Surya Vinyasa Flow</option>
+                            <option>Mysore Ashtanga Series</option>
+                            <option>Pranayama &amp; Breathwork</option>
+                            <option>Aerial Silk Decompression</option>
+                            <option>432Hz Sound Healing</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="suRole">Account Role</label>
+                        <select id="suRole" class="js-sa-select">
+                            <option value="member">Member / Practitioner</option>
+                            <option value="admin">Acharya / Admin</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-2" style="gap:12px;">
+                    <div class="form-group">
+                        <label for="suPass">Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="suPass" placeholder="Min. 6 chars" required>
+                            <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" tabindex="-1">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="form-error">At least 6 characters.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="suConfirm">Confirm Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="suConfirm" placeholder="Repeat password" required>
+                            <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" tabindex="-1">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="form-error">Passwords do not match.</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px;">Create Account <i class="fas fa-arrow-right"></i></button>
+            </form>
+
+            <div style="text-align:center;margin:18px 0 10px;color:var(--text-muted);font-size:.9rem;">— or sign up with —</div>
+            <div class="d-flex gap-2">
+                <a href="404.html" class="social-btn"><i class="fab fa-google"></i><span>Google</span></a>
+                <a href="404.html" class="social-btn"><i class="fab fa-apple"></i><span>Apple</span></a>
+            </div>
+            <p style="text-align:center;margin-top:18px;margin-bottom:0;font-size:.95rem;">
+                Already a member? <a href="signin.html" class="highlight" style="font-weight:700;">Sign In</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+(function () {
+    var form = document.getElementById('signupForm');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('suName');
+        var email = document.getElementById('suEmail');
+        var phone = document.getElementById('suPhone');
+        var sport = document.getElementById('suSport');
+        var role = document.getElementById('suRole');
+        var pass = document.getElementById('suPass');
+        var confirm = document.getElementById('suConfirm');
+        var ok = true;
+
+        if (!window.StacklyForms.isName(name.value)) { window.StacklyForms.setGroupError(name, true); ok = false; } else { window.StacklyForms.setGroupError(name, false); }
+        if (!window.StacklyForms.isEmail(email.value)) { window.StacklyForms.setGroupError(email, true); ok = false; } else { window.StacklyForms.setGroupError(email, false); }
+        if (!window.StacklyForms.isPhone(phone.value)) { window.StacklyForms.setGroupError(phone, true); ok = false; } else { window.StacklyForms.setGroupError(phone, false); }
+        if (!window.StacklyForms.isPassword(pass.value)) { window.StacklyForms.setGroupError(pass, true); ok = false; } else { window.StacklyForms.setGroupError(pass, false); }
+        if (!confirm.value || confirm.value !== pass.value) { window.StacklyForms.setGroupError(confirm, true, 'Passwords do not match.'); ok = false; } else { window.StacklyForms.setGroupError(confirm, false); }
+
+        if (!ok) {
+            window.KickToast.show('Please fix the highlighted fields.', 'error', 'Registration Incomplete');
+            return;
+        }
+
+        var submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.classList.add('loading');
+
+        var user = {
+            name: name.value.trim(),
+            email: email.value.trim(),
+            phone: phone.value.trim() || '+91 98765 43210',
+            sport: sport.value,
+            tier: 'Sadhana Flow',
+            plan: 'Sadhana Flow',
+            role: role.value,
+            loggedIn: false
+        };
+        window.StacklyAuth.setUser(user);
+        window.KickToast.show('Account created successfully! Redirecting to Sign In...', 'success', 'Registration Successful');
+        setTimeout(function () {
+            window.location.href = 'signin.html';
+        }, 1200);
+    });
+})();
+</script>
+</body>
+</html>

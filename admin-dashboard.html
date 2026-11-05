@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" class="preloader-active">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acharya Admin Dashboard - Stackly Yoga Coaching Platform</title>
+    <link rel="icon" type="image/webp" href="assets/top-logo.webp">
+    <link rel="apple-touch-icon" href="assets/top-logo.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sa-preloader" class="sa-preloader" aria-hidden="true">
+    <div class="sa-preloader__field"></div>
+    <div class="sa-preloader__core">
+        <div class="sa-preloader__lane"></div>
+        <div class="sa-preloader__lane sa-preloader__lane--mid"></div>
+        <div class="sa-preloader__lane sa-preloader__lane--inner"></div>
+        <div class="sa-preloader__runner"><span></span></div>
+        <div class="sa-preloader__ball"></div>
+        <div class="sa-preloader__mark">
+            <img src="assets/top-logo.webp" alt="Stackly">
+        </div>
+    </div>
+    <div class="sa-preloader__brand">
+        <span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span>
+    </div>
+    <p class="sa-preloader__tag">Awakening Mind, Body &amp; Prana</p>
+    <div class="sa-preloader__bar"><span></span></div>
+</div>
+
+<div class="page-wrapper">
+<div class="dash-sidebar-overlay" id="dashOverlay"></div>
+
+<header class="dash-top">
+    <div class="dash-top-left">
+        <div class="dash-top-logo-zone">
+            <button class="dash-menu-toggle" id="dashMenuToggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            <a href="index.html" class="dash-top-logo">
+                <img src="assets/logo.webp" alt="Stackly Logo">
+            </a>
+        </div>
+        <div class="dash-top-divider"></div>
+        <div class="dash-top-welcome">
+            <h2>Sanctuary Command, <span class="highlight js-user-name">Acharya Admin</span></h2>
+            <p>Salem Shala operations, cohort attendance, Acharya faculty &amp; revenue analytics</p>
+        </div>
+    </div>
+    <div class="dash-top-right">
+        <button class="dash-bell" data-target="notifications" title="Notifications">
+            <i class="fas fa-bell"></i><span class="dot"></span>
+        </button>
+        <div class="dash-user">
+            <div class="dash-avatar js-user-initials">A</div>
+            <div>
+                <div style="font-weight: 700; font-size: .92rem;" class="js-user-name">Acharya Admin</div>
+                <div style="font-size: .75rem; color: #34d399;">Sanctuary Director</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dash-layout">
+    <aside class="dash-sidebar" id="dashSidebar">
+        <div class="sidebar-user-card" style="margin-top: 0; margin-bottom: 14px;">
+            <div class="sidebar-user-avatar js-user-initials">A</div>
+            <div class="sidebar-user-details">
+                <div class="sidebar-user-name js-user-name">Acharya Admin</div>
+                <div class="sidebar-user-email js-user-email">admin@stackly.com</div>
+            </div>
+            <button class="close-sidebar-btn" id="closeSidebarBtn" aria-label="Close sidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="sidebar-role-card admin"><i class="fas fa-user-shield"></i> ACHARYA ADMIN CONSOLE</div>
+        <div class="dash-sidebar-nav-container">
+            <div class="dash-nav-label">Sanctuary Management</div>
+            <button class="dash-nav-btn active" data-target="overview"><i class="fas fa-chart-pie"></i> Shala Overview</button>
+            <button class="dash-nav-btn" data-target="athletes"><i class="fas fa-users"></i> Practitioners</button>
+            <button class="dash-nav-btn" data-target="coaches"><i class="fas fa-om"></i> Acharya Faculty</button>
+            <button class="dash-nav-btn" data-target="batches"><i class="fas fa-layer-group"></i> Shala Cohorts</button>
+            <button class="dash-nav-btn" data-target="bookings"><i class="fas fa-calendar-check"></i> Mat Approvals</button>
+            <button class="dash-nav-btn" data-target="payments"><i class="fas fa-sack-dollar"></i> Revenue &amp; Dues</button>
+            <button class="dash-nav-btn" data-target="reports"><i class="fas fa-chart-line"></i> Analytics</button>
+            <button class="dash-nav-btn" data-target="notifications"><i class="fas fa-bell"></i> Notifications</button>
+            <button class="dash-nav-btn" data-target="settings"><i class="fas fa-sliders"></i> Shala Settings</button>
+            <button class="dash-nav-btn" data-target="support"><i class="fas fa-headset"></i> VIP Support</button>
+        </div>
+        <button class="dash-nav-btn" data-logout style="color: #ff8a8a;"><i class="fas fa-right-from-bracket"></i> Sign Out</button>
+    </aside>
+
+    <main class="dash-main">
+        
+        <section class="dash-panel active" id="section-overview">
+            <div class="dash-grid dash-grid-4">
+                <div class="athlete-compact-card theme-football">
+                    <div class="athlete-compact-bg"><img src="assets/yoga-studio-1.webp" alt="Active Practitioners"></div>
+                    <div class="athlete-compact-overlay"></div>
+                    <div class="athlete-compact-body">
+                        <div class="athlete-card-header">
+                            <div class="athlete-ico-wrap"><i class="fas fa-users"></i></div>
+                            <div class="athlete-info">
+                                <span class="athlete-title">Practitioners</span>
+                                <span class="athlete-sub">Active Salem Sangha</span>
+                            </div>
+                        </div>
+                        <div class="athlete-card-footer">
+                            <h3 class="athlete-num">1,284</h3>
+                            <span class="athlete-trend"><i class="fas fa-arrow-trend-up"></i> +14%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="athlete-compact-card theme-basketball">
+                    <div class="athlete-compact-bg"><img src="assets/yoga-vinyasa.webp" alt="Acharya Faculty"></div>
+                    <div class="athlete-compact-overlay"></div>
+                    <div class="athlete-compact-body">
+                        <div class="athlete-card-header">
+                            <div class="athlete-ico-wrap"><i class="fas fa-om"></i></div>
+                            <div class="athlete-info">
+                                <span class="athlete-title">Acharya Faculty</span>
+                                <span class="athlete-sub">E-RYT 500 Mentors</span>
+                            </div>
+                        </div>
+                        <div class="athlete-card-footer">
+                            <h3 class="athlete-num">35</h3>
+                            <span class="athlete-trend"><i class="fas fa-check"></i> All Active</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="athlete-compact-card theme-tennis">
+                    <div class="athlete-compact-bg"><img src="assets/yoga-aerial.webp" alt="Daily Shala Occupancy"></div>
+                    <div class="athlete-compact-overlay"></div>
+                    <div class="athlete-compact-body">
+                        <div class="athlete-card-header">
+                            <div class="athlete-ico-wrap"><i class="fas fa-spa"></i></div>
+                            <div class="athlete-info">
+                                <span class="athlete-title">Shala Occupancy</span>
+                                <span class="athlete-sub">8 Sanctuary Rooms</span>
+                            </div>
+                        </div>
+                        <div class="athlete-card-footer">
+                            <h3 class="athlete-num">94.2%</h3>
+                            <span class="athlete-trend"><i class="fas fa-fire"></i> Peak Hrs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="athlete-compact-card theme-swimming">
+                    <div class="athlete-compact-bg"><img src="assets/yoga-soundbath.webp" alt="Monthly Revenue"></div>
+                    <div class="athlete-compact-overlay"></div>
+                    <div class="athlete-compact-body">
+                        <div class="athlete-card-header">
+                            <div class="athlete-ico-wrap"><i class="fas fa-sack-dollar"></i></div>
+                            <div class="athlete-info">
+                                <span class="athlete-title">Monthly Revenue</span>
+                                <span class="athlete-sub">Memberships &amp; TTC</span>
+                            </div>
+                        </div>
+                        <div class="athlete-card-footer">
+                            <h3 class="athlete-num">$68.4K</h3>
+                            <span class="athlete-trend"><i class="fas fa-arrow-trend-up"></i> +18%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-grid dash-grid-2" style="margin-top: 22px;">
+                <div class="dash-card">
+                    <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 14px;"><i class="fas fa-bolt highlight"></i> Quick Sanctuary Controls</h3>
+                    <div class="dash-grid dash-grid-2" style="gap: 12px;">
+                        <button class="qa-btn" data-target="bookings"><i class="fas fa-calendar-check"></i> Approve Shala Bookings</button>
+                        <button class="qa-btn" data-target="batches"><i class="fas fa-layer-group"></i> Manage Shala Cohorts</button>
+                        <button class="qa-btn" data-target="coaches"><i class="fas fa-user-plus"></i> Assign Acharya Mentor</button>
+                        <button class="qa-btn" data-target="reports"><i class="fas fa-file-export"></i> View Revenue Analytics</button>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 14px;"><i class="fas fa-chart-bar highlight"></i> Enrollment By Yoga Path</h3>
+                    <div class="stat-row"><span>Surya Vinyasa &amp; Hatha Alignment</span><span>92%</span></div>
+                    <div class="bar-track"><span class="bar-fill bar-fill-emerald" data-value="92" style="width:92%;"></span></div>
+                    <div class="stat-row"><span>Mysore Ashtanga &amp; Pranayama Lab</span><span>86%</span></div>
+                    <div class="bar-track"><span class="bar-fill bar-fill-cyan" data-value="86" style="width:86%;"></span></div>
+                    <div class="stat-row"><span>Aerial Silk &amp; 432Hz Sound Bath</span><span>95%</span></div>
+                    <div class="bar-track"><span class="bar-fill bar-fill-purple" data-value="95" style="width:95%;"></span></div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-athletes">
+            <div class="dash-card">
+                <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 14px;">Registered Sanctuary Practitioners</h3>
+                <div style="overflow-x: auto;">
+                    <table class="dash-table">
+                        <thead><tr><th>Practitioner</th><th>Primary Path</th><th>Membership Tier</th><th>3D Posture Score</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>Divya Narayanan</td><td>Classical Hatha</td><td>Sadhana Flow</td><td>94%</td><td><span class="pill">Active</span></td></tr>
+                            <tr><td>Arjun Menon</td><td>Mysore Ashtanga</td><td>Moksha Mastery</td><td>97%</td><td><span class="pill">Active</span></td></tr>
+                            <tr><td>Karthik Subramanian</td><td>432Hz Sound &amp; Yin</td><td>Sadhana Flow</td><td>91%</td><td><span class="pill">Active</span></td></tr>
+                            <tr><td>Sneha Rajagopal</td><td>Prenatal Yoga</td><td>Moksha Mastery</td><td>95%</td><td><span class="pill">Active</span></td></tr>
+                            <tr><td>Vikramaditya R.</td><td>Pranayama Lab</td><td>Prana Seeker</td><td>89%</td><td><span class="pill warn">Renewal Due</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-coaches">
+            <div class="dash-grid dash-grid-3">
+                <div class="dash-card">
+                    <div class="dash-card-img"><img src="assets/coach-ananya.webp" alt="Acharya Ananya"></div>
+                    <span class="pill">Lead Acharya</span>
+                    <h3 style="font-size:1.2rem;color:#fff;margin-top:8px;">Acharya Ananya Iyer</h3>
+                    <p>Hatha &amp; 3D Biomechanics • 4.9★ Rating</p>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card-img"><img src="assets/coach-dev.webp" alt="Guru Devendra"></div>
+                    <span class="pill">Mysore Director</span>
+                    <h3 style="font-size:1.2rem;color:#fff;margin-top:8px;">Guru Devendra Raghavan</h3>
+                    <p>Ashtanga Vinyasa Series • 5.0★ Rating</p>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card-img"><img src="assets/coach-meera.webp" alt="Dr. Meera Krishnan"></div>
+                    <span class="pill">Ayurveda Physician</span>
+                    <h3 style="font-size:1.2rem;color:#fff;margin-top:8px;">Dr. Meera Krishnan</h3>
+                    <p>Pranayama &amp; Sattvic Therapy • 4.9★ Rating</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-batches">
+            <div class="dash-card">
+                <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 16px;">Active Salem Shala Cohorts &amp; Capacity</h3>
+                <div class="stat-row"><span>Brahma Muhurta Mysore Ashtanga (24 / 25 Mats)</span><span>96%</span></div>
+                <div class="bar-track"><span class="bar-fill bar-fill-emerald" data-value="96" style="width:96%;"></span></div>
+                <div class="stat-row"><span>Surya Main Shala Vinyasa Flow (22 / 24 Mats)</span><span>92%</span></div>
+                <div class="bar-track"><span class="bar-fill bar-fill-cyan" data-value="92" style="width:92%;"></span></div>
+                <div class="stat-row"><span>Aerial Silk Decompression Dome (12 / 12 Hammocks)</span><span>100%</span></div>
+                <div class="bar-track"><span class="bar-fill bar-fill-warning" data-value="100" style="width:100%;"></span></div>
+                <div class="stat-row"><span>Nada Cedarwood 432Hz Sound Chamber (28 / 30 Cushions)</span><span>93%</span></div>
+                <div class="bar-track"><span class="bar-fill bar-fill-purple" data-value="93" style="width:93%;"></span></div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-bookings">
+            <div class="dash-card">
+                <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 14px;">Pending Shala &amp; 1-on-1 Assessment Requests</h3>
+                <div style="overflow-x: auto;">
+                    <table class="dash-table">
+                        <thead><tr><th>Practitioner</th><th>Requested Session</th><th>Preferred Slot</th><th>Status</th><th>Action</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>Pavithra S.</td>
+                                <td>3D Spinal Posture Assessment</td>
+                                <td>Tomorrow, 10:30 AM</td>
+                                <td><span class="pill warn">Pending</span></td>
+                                <td>
+                                    <button class="btn btn-primary" data-booking-action="approve" style="padding:6px 14px;font-size:.8rem;">Approve</button>
+                                    <button class="btn btn-outline" data-booking-action="decline" style="padding:6px 14px;font-size:.8rem;">Decline</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Raghavendra K.</td>
+                                <td>Aerial Silk Dome Intro</td>
+                                <td>Fri, 5:45 PM</td>
+                                <td><span class="pill warn">Pending</span></td>
+                                <td>
+                                    <button class="btn btn-primary" data-booking-action="approve" style="padding:6px 14px;font-size:.8rem;">Approve</button>
+                                    <button class="btn btn-outline" data-booking-action="decline" style="padding:6px 14px;font-size:.8rem;">Decline</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-payments">
+            <div class="dash-card">
+                <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 14px;">Recent Membership &amp; TTC Transactions</h3>
+                <div style="overflow-x: auto;">
+                    <table class="dash-table">
+                        <thead><tr><th>Invoice</th><th>Member</th><th>Plan / Immersion</th><th>Amount</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>#INV-9421</td><td>Divya Narayanan</td><td>Sadhana Flow Monthly</td><td>$89.00</td><td><span class="pill">Paid</span></td></tr>
+                            <tr><td>#INV-9422</td><td>Arjun Menon</td><td>Moksha Mastery 1-on-1</td><td>$149.00</td><td><span class="pill">Paid</span></td></tr>
+                            <tr><td>#INV-9423</td><td>Sneha Rajagopal</td><td>Prenatal Garbha Cohort</td><td>$149.00</td><td><span class="pill">Paid</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-reports">
+            <div class="dash-card">
+                <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 14px;">Top Performing Sanctuary Cohorts</h3>
+                <div style="overflow-x: auto;">
+                    <table class="dash-table">
+                        <thead><tr><th>Cohort</th><th>Pathway</th><th>Attendance</th><th>Retention</th></tr></thead>
+                        <tbody>
+                            <tr><td>Sunrise Surya Shala</td><td>Vinyasa Krama</td><td>98%</td><td>96%</td></tr>
+                            <tr><td>Mysore Room Batch A</td><td>Ashtanga Primary</td><td>95%</td><td>94%</td></tr>
+                            <tr><td>Nada Sound Immersion</td><td>432Hz Sound Bath</td><td>99%</td><td>97%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-notifications">
+            <div class="dash-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <h3 style="font-size: 1.15rem; color: #fff; margin: 0;">Sanctuary Admin Alerts</h3>
+                    <button class="btn btn-outline" id="markAllRead" style="padding: 8px 18px; font-size: .85rem;">Mark all as read</button>
+                </div>
+                <div class="notif-item unread"><div class="notif-ico"><i class="fas fa-user-plus"></i></div><div><strong>New Practitioner Enrolled</strong><p style="margin: 2px 0 0; font-size: .85rem;">Pavithra S. joined Moksha Mastery Plan. <span style="color: var(--text-muted);">1 hr ago</span></p></div></div>
+                <div class="notif-item unread"><div class="notif-ico"><i class="fas fa-spa"></i></div><div><strong>Aerial Silk Dome At 100% Capacity</strong><p style="margin: 2px 0 0; font-size: .85rem;">Friday 5:45 PM cohort is fully booked. <span style="color: var(--text-muted);">3 hrs ago</span></p></div></div>
+                <div class="notif-item"><div class="notif-ico"><i class="fas fa-star"></i></div><div><strong>5-Star Shala Review</strong><p style="margin: 2px 0 0; font-size: .85rem;">Acharya Ananya received a 5-star alignment review. <span style="color: var(--text-muted);">Yesterday</span></p></div></div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-settings">
+            <div class="dash-grid dash-grid-2">
+                <div class="dash-card">
+                    <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 16px;"><i class="fas fa-sliders highlight"></i> Sanctuary Configuration</h3>
+                    <form id="settingsForm">
+                        <div class="form-group"><label>Sanctuary Name</label><input type="text" value="Stackly Yoga Coaching Platform"></div>
+                        <div class="form-group"><label>Salem Shala Address</label><input type="text" value="MMR Complex, Chinna Thirupathi, Salem 636008"></div>
+                        <div class="form-group"><label>Concierge Email</label><input type="email" value="namaste@stackly.com"></div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Save Sanctuary Settings</button>
+                    </form>
+                </div>
+                <div class="dash-card">
+                    <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 14px;"><i class="fas fa-shield-halved highlight"></i> Shala Systems Health</h3>
+                    <div class="dash-mini-card dash-mini-card--ok">
+                        <strong style="color: #fff; font-size: 0.9rem;">4K Live Stream &amp; 3D Posture Cloud Online</strong>
+                        <span class="pill">99.9%</span>
+                    </div>
+                    <div class="stat-row"><span>4K Sadhana Video Archive Storage</span><span>42.8 / 100 GB</span></div>
+                    <div class="bar-track"><span class="bar-fill bar-fill-emerald" data-value="42" style="width: 42%;"></span></div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-support">
+            <div class="dash-card">
+                <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 16px;"><i class="fas fa-headset highlight"></i> Raise Sanctuary Support Ticket</h3>
+                <form id="supportForm">
+                    <div class="form-group"><label>Subject</label><input type="text" placeholder="Describe the shala or technical request" required></div>
+                    <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Details..." required></textarea></div>
+                    <button type="submit" class="btn btn-primary">Submit Ticket</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</div>
+</div>
+
+<div class="modal-backdrop" id="logoutModal">
+    <div class="modal-card">
+        <div style="font-size: 2.6rem; color: #ff5a5a; margin-bottom: 14px;"><i class="fas fa-right-from-bracket"></i></div>
+        <h3>Leaving the Sanctuary Console?</h3>
+        <p>You're about to sign out of your Stackly Admin account.</p>
+        <div class="modal-actions">
+            <button class="btn btn-outline" id="cancelLogout" style="padding: 12px 26px;">Stay Signed In</button>
+            <button class="btn btn-primary" id="confirmLogout" style="padding: 12px 26px;">Yes, Log Out</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+(function () {
+    var user = window.StacklyAuth.getUser();
+    if (!user || !user.loggedIn) {
+        user = {
+            name: 'Acharya Ananya',
+            email: 'admin@stackly.com',
+            role: 'admin',
+            loggedIn: true
+        };
+    }
+    var displayName = user.name || 'Acharya Admin';
+    var displayEmail = user.email || 'admin@stackly.com';
+    document.querySelectorAll('.js-user-name').forEach(function (el) { el.textContent = displayName; });
+    document.querySelectorAll('.js-user-email').forEach(function (el) { el.textContent = displayEmail; });
+    document.querySelectorAll('.js-user-initials').forEach(function (el) {
+        el.textContent = displayName.trim().split(/\s+/).map(function (w) { return w[0]; }).slice(0, 2).join('').toUpperCase() || 'A';
+    });
+
+    var panels = document.querySelectorAll('.dash-panel');
+    var sidebar = document.getElementById('dashSidebar');
+    var overlay = document.getElementById('dashOverlay');
+    function animateBars(scope) {
+        if (!scope) return;
+        scope.querySelectorAll('.bar-fill').forEach(function (el) {
+            var target = el.getAttribute('data-value') || '0';
+            el.style.width = '0%';
+            setTimeout(function () { el.style.width = target + '%'; }, 80);
+        });
+    }
+    window.showSection = function (id) {
+        if (!document.getElementById('section-' + id)) return;
+        panels.forEach(function (p) { p.classList.toggle('active', p.id === 'section-' + id); });
+        document.querySelectorAll('.dash-nav-btn[data-target]').forEach(function (b) {
+            b.classList.toggle('active', b.getAttribute('data-target') === id);
+        });
+        if (sidebar) sidebar.classList.remove('open');
+        if (overlay) overlay.classList.remove('show');
+        document.body.classList.remove('dash-sidebar-open');
+        document.documentElement.classList.remove('dash-sidebar-open');
+        if (typeof window.closeDashSidebar === 'function') window.closeDashSidebar();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        var activePanel = document.getElementById('section-' + id);
+        animateBars(activePanel);
+        history.replaceState(null, '', '#' + id);
+    };
+    document.querySelectorAll('.dash-nav-btn[data-target], .dash-bell[data-target], .qa-btn[data-target]').forEach(function (b) {
+        b.addEventListener('click', function () { window.showSection(b.getAttribute('data-target')); });
+    });
+    var initial = (location.hash || '#overview').replace('#', '');
+    window.showSection(document.getElementById('section-' + initial) ? initial : 'overview');
+
+    if (typeof window.initMobileSidebar === 'function') {
+        window.initMobileSidebar();
+    }
+
+    document.querySelectorAll('[data-booking-action]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var row = btn.closest('tr');
+            var action = btn.getAttribute('data-booking-action');
+            var cell = btn.closest('td');
+            if (row) {
+                var pill = row.querySelector('.pill');
+                if (pill) {
+                    pill.textContent = action === 'approve' ? 'Confirmed' : 'Declined';
+                    pill.className = 'pill' + (action === 'approve' ? '' : ' bad');
+                }
+            }
+            if (cell) {
+                cell.innerHTML = '<button class="btn btn-outline" style="padding: 6px 14px; font-size: .8rem;" disabled>' + (action === 'approve' ? 'Confirmed' : 'Declined') + '</button>';
+            }
+            window.KickToast.show(action === 'approve' ? 'Shala mat booking confirmed and practitioner notified.' : 'Booking request declined.', action === 'approve' ? 'success' : 'info', action === 'approve' ? 'Booking Confirmed' : 'Booking Declined');
+        });
+    });
+
+    var settingsForm = document.getElementById('settingsForm');
+    if (settingsForm) {
+        settingsForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.KickToast.show('Sanctuary settings have been saved.', 'success', 'Settings Saved');
+        });
+    }
+    var supportForm = document.getElementById('supportForm');
+    if (supportForm) {
+        supportForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.KickToast.show('Support ticket submitted to our technical team.', 'success', 'Ticket Sent');
+            supportForm.reset();
+        });
+    }
+    var markAllBtn = document.getElementById('markAllRead');
+    if (markAllBtn) {
+        markAllBtn.addEventListener('click', function () {
+            document.querySelectorAll('.notif-item.unread').forEach(function (n) { n.classList.remove('unread'); });
+            window.KickToast.show('All notifications marked as read.', 'info', 'Inbox Cleared');
+        });
+    }
+})();
+</script>
+</body>
+</html>

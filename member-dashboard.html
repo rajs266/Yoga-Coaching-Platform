@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en" class="preloader-active">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard - Stackly Yoga Coaching Platform</title>
+    <link rel="icon" type="image/webp" href="assets/top-logo.webp">
+    <link rel="apple-touch-icon" href="assets/top-logo.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sa-preloader" class="sa-preloader" aria-hidden="true">
+    <div class="sa-preloader__field"></div>
+    <div class="sa-preloader__core">
+        <div class="sa-preloader__lane"></div>
+        <div class="sa-preloader__lane sa-preloader__lane--mid"></div>
+        <div class="sa-preloader__lane sa-preloader__lane--inner"></div>
+        <div class="sa-preloader__runner"><span></span></div>
+        <div class="sa-preloader__ball"></div>
+        <div class="sa-preloader__mark">
+            <img src="assets/top-logo.webp" alt="Stackly">
+        </div>
+    </div>
+    <div class="sa-preloader__brand">
+        <span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span>
+    </div>
+    <p class="sa-preloader__tag">Awakening Mind, Body &amp; Prana</p>
+    <div class="sa-preloader__bar"><span></span></div>
+</div>
+
+<div class="page-wrapper">
+<div class="dash-sidebar-overlay" id="dashOverlay"></div>
+
+<header class="dash-top">
+    <div class="dash-top-left">
+        <div class="dash-top-logo-zone">
+            <button class="dash-menu-toggle" id="dashMenuToggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            <a href="index.html" class="dash-top-logo">
+                <img src="assets/logo.webp" alt="Stackly Logo">
+            </a>
+        </div>
+        <div class="dash-top-divider"></div>
+        <div class="dash-top-welcome">
+            <h2>Namaste, <span class="highlight js-user-name">Practitioner</span></h2>
+            <p>Your sadhana schedule, 3D posture alignment &amp; pranayama metrics</p>
+        </div>
+    </div>
+    <div class="dash-top-right">
+        <button class="dash-bell" data-target="notifications" title="Notifications">
+            <i class="fas fa-bell"></i><span class="dot"></span>
+        </button>
+        <div class="dash-user">
+            <div class="dash-avatar js-user-initials">P</div>
+            <div>
+                <div style="font-weight: 700; font-size: .92rem;" class="js-user-name">Practitioner</div>
+                <div style="font-size: .75rem; color: var(--accent);" class="js-user-plan">Sadhana Flow Plan</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dash-layout">
+    <aside class="dash-sidebar" id="dashSidebar">
+        <div class="sidebar-user-card" style="margin-top: 0; margin-bottom: 14px;">
+            <div class="sidebar-user-avatar js-user-initials">P</div>
+            <div class="sidebar-user-details">
+                <div class="sidebar-user-name js-user-name">Practitioner</div>
+                <div class="sidebar-user-email js-user-email">seeker@stackly.com</div>
+            </div>
+            <button class="close-sidebar-btn" id="closeSidebarBtn" aria-label="Close sidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="sidebar-role-card"><i class="fas fa-spa"></i> SACRED MEMBER PORTAL</div>
+        <div class="dash-sidebar-nav-container">
+            <div class="dash-nav-label">Sadhana Menu</div>
+            <button class="dash-nav-btn active" data-target="dashboardHome"><i class="fas fa-compass"></i> Sanctuary Home</button>
+            <button class="dash-nav-btn" data-target="programs"><i class="fas fa-om"></i> My Yoga Paths</button>
+            <button class="dash-nav-btn" data-target="sessions"><i class="fas fa-calendar-check"></i> Shala Schedule</button>
+            <button class="dash-nav-btn" data-target="progress"><i class="fas fa-person-rays"></i> 3D Posture &amp; Breath</button>
+            <button class="dash-nav-btn" data-target="rewards"><i class="fas fa-spa"></i> Karma &amp; Sangha</button>
+            <button class="dash-nav-btn" data-target="membership"><i class="fas fa-crown"></i> Membership Plan</button>
+            <button class="dash-nav-btn" data-target="videos"><i class="fas fa-circle-play"></i> Guided Flows</button>
+            <button class="dash-nav-btn" data-target="notifications"><i class="fas fa-bell"></i> Notifications</button>
+            <button class="dash-nav-btn" data-target="settings"><i class="fas fa-sliders"></i> Profile &amp; Dosha</button>
+        </div>
+        <button class="dash-nav-btn" data-logout style="color: #ff8a8a;"><i class="fas fa-right-from-bracket"></i> Sign Out</button>
+    </aside>
+
+    <main class="dash-main">
+        
+        <section class="dash-panel active" id="section-dashboardHome">
+            <div class="dash-grid dash-grid-4">
+                <div class="athlete-compact-card theme-football">
+                    <div class="athlete-compact-bg"><img src="assets/yoga-vinyasa.webp" alt="Sadhana Streak"></div>
+                    <div class="athlete-compact-overlay"></div>
+                    <div class="athlete-compact-body">
+                        <div class="athlete-card-header">
+                            <div class="athlete-ico-wrap"><i class="fas fa-fire"></i></div>
+                            <div class="athlete-info">
+                                <span class="athlete-title">Sadhana Streak</span>
+                                <span class="athlete-sub">Daily Mat Consistency</span>
+                            </div>
+                        </div>
+                        <div class="athlete-card-footer">
+                            <h3 class="athlete-num">24 Days</h3>
+                            <span class="athlete-trend"><i class="fas fa-arrow-trend-up"></i> +6 this wk</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="athlete-compact-card theme-basketball">
+                    <div class="athlete-compact-bg"><img src="assets/yoga-hatha.webp" alt="Posture Score"></div>
+                    <div class="athlete-compact-overlay"></div>
+                    <div class="athlete-compact-body">
+                        <div class="athlete-card-header">
+                            <div class="athlete-ico-wrap"><i class="fas fa-person-rays"></i></div>
+                            <div class="athlete-info">
+                                <span class="athlete-title">3D Alignment</span>
+                                <span class="athlete-sub">Spinal Symmetry Index</span>
+                            </div>
+                        </div>
+                        <div class="athlete-card-footer">
+                            <h3 class="athlete-num">94%</h3>
+                            <span class="athlete-trend"><i class="fas fa-check"></i> Optimal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="athlete-compact-card theme-tennis">
+                    <div class="athlete-compact-bg"><img src="assets/yoga-pranayama.webp" alt="Pranayama Minutes"></div>
+                    <div class="athlete-compact-overlay"></div>
+                    <div class="athlete-compact-body">
+                        <div class="athlete-card-header">
+                            <div class="athlete-ico-wrap"><i class="fas fa-wind"></i></div>
+                            <div class="athlete-info">
+                                <span class="athlete-title">Prana &amp; Dhyana</span>
+                                <span class="athlete-sub">Mindful Breath Hours</span>
+                            </div>
+                        </div>
+                        <div class="athlete-card-footer">
+                            <h3 class="athlete-num">42.5h</h3>
+                            <span class="athlete-trend"><i class="fas fa-spa"></i> 68s Hold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="athlete-compact-card theme-swimming">
+                    <div class="athlete-compact-bg"><img src="assets/yoga-soundbath.webp" alt="HRV Calm Score"></div>
+                    <div class="athlete-compact-overlay"></div>
+                    <div class="athlete-compact-body">
+                        <div class="athlete-card-header">
+                            <div class="athlete-ico-wrap"><i class="fas fa-heart-pulse"></i></div>
+                            <div class="athlete-info">
+                                <span class="athlete-title">Vagal HRV Calm</span>
+                                <span class="athlete-sub">Nervous System Tone</span>
+                            </div>
+                        </div>
+                        <div class="athlete-card-footer">
+                            <h3 class="athlete-num">88 ms</h3>
+                            <span class="athlete-trend"><i class="fas fa-bolt"></i> Deep Rest</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-grid dash-grid-2" style="margin-top: 22px;">
+                <div class="dash-card">
+                    <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 14px;"><i class="fas fa-bolt highlight"></i> Quick Sanctuary Actions</h3>
+                    <div class="dash-grid dash-grid-2" style="gap: 12px;">
+                        <button class="qa-btn" data-target="sessions"><i class="fas fa-calendar-plus"></i> Book Shala Mat</button>
+                        <button class="qa-btn" data-target="videos"><i class="fas fa-circle-play"></i> Stream 4K Sadhana</button>
+                        <button class="qa-btn" data-target="progress"><i class="fas fa-person-rays"></i> View 3D Spine Report</button>
+                        <button class="qa-btn" data-target="membership"><i class="fas fa-crown"></i> Upgrade Membership</button>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 14px;"><i class="fas fa-sun highlight"></i> Next Shala Session</h3>
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; background:rgba(255,255,255,0.03); padding:16px; border-radius:14px; border:1px solid rgba(230,184,92,0.2);">
+                        <div>
+                            <span class="pill" style="margin-bottom:6px;">Tomorrow • 6:30 AM IST</span>
+                            <h4 style="color:#fff; margin:4px 0;">Surya Vinyasa Krama &amp; Pranayama</h4>
+                            <p style="margin:0; font-size:.88rem;">Surya Main Shala (Mat #07) • Acharya Ananya Iyer</p>
+                        </div>
+                        <button class="btn btn-primary" data-target="sessions" style="padding:10px 20px; font-size:.9rem;">View Schedule</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-grid dash-grid-2" style="margin-top: 22px;">
+                <div class="dash-card">
+                    <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 14px;"><i class="fas fa-list-check highlight"></i> Daily Dinacharya Checklist</h3>
+                    <label class="goal-check-item">
+                        <span class="goal-check-left"><input type="checkbox" checked> <span>12 Rounds of Surya Namaskar at Sunrise</span></span>
+                        <span class="pill">+50 Prana XP</span>
+                    </label>
+                    <label class="goal-check-item">
+                        <span class="goal-check-left"><input type="checkbox" checked> <span>15 Mins Nadi Shodhana (4:4:6 Breath Ratio)</span></span>
+                        <span class="pill">+40 Prana XP</span>
+                    </label>
+                    <label class="goal-check-item">
+                        <span class="goal-check-left"><input type="checkbox"> <span>Evening Viparita Karani &amp; Yoga Nidra</span></span>
+                        <span class="pill warn">Pending</span>
+                    </label>
+                </div>
+                <div class="dash-card">
+                    <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 14px;"><i class="fas fa-comment-dots highlight"></i> Acharya Alignment Note</h3>
+                    <div style="display:flex; gap:14px; align-items:flex-start; background:rgba(230,184,92,0.07); padding:16px; border-radius:14px; border:1px solid rgba(230,184,92,0.25);">
+                        <img src="assets/coach-ananya.webp" alt="Acharya Ananya" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);">
+                        <div>
+                            <strong style="color:#fff;">Acharya Ananya Iyer</strong>
+                            <p style="margin:4px 0 0; font-size:.9rem; color:#e2ece9;">"Beautiful thoracic opening in your Ustrasana this week! Continue softening your floating ribs during overhead inhales to protect your lumbar curve."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-programs">
+            <div class="dash-grid dash-grid-3">
+                <div class="dash-card">
+                    <div class="dash-card-img"><img src="assets/yoga-hatha.webp" alt="Hatha Alignment"></div>
+                    <span class="pill">Active Cohort</span>
+                    <h3 style="font-size:1.25rem;color:#fff;margin-top:10px;">Classical Hatha &amp; Spine Alignment</h3>
+                    <p style="margin-bottom:14px;">Acharya Ananya • Mon / Wed / Fri • 6:30 AM</p>
+                    <div class="stat-row"><span>Curriculum Completion</span><span>78%</span></div>
+                    <div class="bar-track"><span class="bar-fill" data-value="78" style="width:78%;"></span></div>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card-img"><img src="assets/yoga-pranayama.webp" alt="Pranayama Lab"></div>
+                    <span class="pill">Active Cohort</span>
+                    <h3 style="font-size:1.25rem;color:#fff;margin-top:10px;">Pranayama &amp; Vagal Breath Lab</h3>
+                    <p style="margin-bottom:14px;">Dr. Meera Krishnan • Tue / Thu • 7:00 AM</p>
+                    <div class="stat-row"><span>Curriculum Completion</span><span>64%</span></div>
+                    <div class="bar-track"><span class="bar-fill" data-value="64" style="width:64%;"></span></div>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card-img"><img src="assets/yoga-soundbath.webp" alt="432Hz Sound Bath"></div>
+                    <span class="pill">Weekend Immersion</span>
+                    <h3 style="font-size:1.25rem;color:#fff;margin-top:10px;">Nada Sound &amp; Yoga Nidra</h3>
+                    <p style="margin-bottom:14px;">Swami Siddharth • Saturdays • 6:30 PM</p>
+                    <div class="stat-row"><span>Curriculum Completion</span><span>90%</span></div>
+                    <div class="bar-track"><span class="bar-fill" data-value="90" style="width:90%;"></span></div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-sessions">
+            <div class="dash-card">
+                <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 14px;">Upcoming Shala &amp; Live Bookings</h3>
+                <div style="overflow-x: auto;">
+                    <table class="dash-table">
+                        <thead>
+                            <tr><th>Session</th><th>Acharya</th><th>Date &amp; Time</th><th>Sanctuary Space</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Surya Vinyasa Krama</td><td>Acharya Ananya</td><td>Tomorrow, 6:30 AM</td><td>Surya Main Shala (Mat #07)</td><td><span class="pill">Confirmed</span></td></tr>
+                            <tr><td>Pranayama &amp; Kumbhaka Lab</td><td>Dr. Meera Krishnan</td><td>Thu, 7:00 AM</td><td>Lotus Breath Room</td><td><span class="pill">Confirmed</span></td></tr>
+                            <tr><td>Aerial Silk Decompression</td><td>Acharya Rohan</td><td>Fri, 5:45 PM</td><td>Aerial Silk Dome</td><td><span class="pill">Confirmed</span></td></tr>
+                            <tr><td>432Hz Himalayan Sound Bath</td><td>Swami Siddharth</td><td>Sat, 6:30 PM</td><td>Nada Cedarwood Chamber</td><td><span class="pill warn">Waitlist #1</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-progress">
+            <div class="dash-grid dash-grid-2">
+                <div class="dash-card">
+                    <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 16px;">3D Biomechanical Posture Diagnostics</h3>
+                    <div class="stat-row"><span>Thoracic &amp; Shoulder Extension</span><span>92%</span></div>
+                    <div class="bar-track"><span class="bar-fill" data-value="92"></span></div>
+                    <div class="stat-row"><span>Pelvic &amp; Lumbar Neutrality</span><span>88%</span></div>
+                    <div class="bar-track"><span class="bar-fill" data-value="88"></span></div>
+                    <div class="stat-row"><span>Hamstring &amp; Hip Capsule Mobility</span><span>84%</span></div>
+                    <div class="bar-track"><span class="bar-fill" data-value="84"></span></div>
+                    <div class="stat-row"><span>Kumbhaka Breath Retention Capacity</span><span>91%</span></div>
+                    <div class="bar-track"><span class="bar-fill" data-value="91"></span></div>
+                </div>
+                <div class="dash-card">
+                    <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 16px;">Ayurvedic Dosha Balance</h3>
+                    <p style="margin-bottom:16px;">Current seasonal profile assessed by Dr. Meera Krishnan:</p>
+                    <div class="stat-row"><span>Sattva (Mental Clarity &amp; Stillness)</span><span>90%</span></div>
+                    <div class="bar-track"><span class="bar-fill bar-fill-emerald" data-value="90"></span></div>
+                    <div class="stat-row"><span>Vata Grounding (Nervous System Calm)</span><span>85%</span></div>
+                    <div class="bar-track"><span class="bar-fill bar-fill-cyan" data-value="85"></span></div>
+                    <div class="stat-row"><span>Agni (Digestive &amp; Metabolic Vitality)</span><span>89%</span></div>
+                    <div class="bar-track"><span class="bar-fill bar-fill-purple" data-value="89"></span></div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-rewards">
+            <div class="dash-grid dash-grid-2">
+                <div class="reward-tier-card">
+                    <span class="pill" style="margin-bottom:10px;"><i class="fas fa-spa"></i> Golden Lotus Tier</span>
+                    <h3 style="color:#fff;font-size:1.6rem;margin-bottom:6px;">2,840 Prana Karma Points</h3>
+                    <p style="margin-bottom:16px;">360 points away from unlocking a complimentary 1-on-1 Ayurvedic Shirodhara session.</p>
+                    <div class="stat-row"><span>Progress to Diamond Siddha Tier</span><span>88%</span></div>
+                    <div class="bar-track"><span class="bar-fill" data-value="88"></span></div>
+                </div>
+                <div class="dash-card">
+                    <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 14px;">Sangha Consistency Circle</h3>
+                    <div class="leaderboard-rank-item"><div style="display:flex;align-items:center;gap:10px;"><span class="rank-badge gold">1</span><strong>Divya Narayanan</strong></div><span class="pill">3,120 XP</span></div>
+                    <div class="leaderboard-rank-item me"><div style="display:flex;align-items:center;gap:10px;"><span class="rank-badge silver">2</span><strong class="js-user-name">You</strong></div><span class="pill">2,840 XP</span></div>
+                    <div class="leaderboard-rank-item"><div style="display:flex;align-items:center;gap:10px;"><span class="rank-badge bronze">3</span><strong>Arjun Menon</strong></div><span class="pill">2,690 XP</span></div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-membership">
+            <div class="dash-card" style="margin-bottom: 20px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+                    <div>
+                        <span class="pill" style="margin-bottom:8px;">Active Sanctuary ID: #SK-YOGA-908</span>
+                        <h3 style="color:#fff;margin:4px 0;" id="currentPlanLabel" class="js-user-plan">Sadhana Flow Plan</h3>
+                        <p style="margin:0;color:var(--text-muted);" class="js-user-email">seeker@stackly.com</p>
+                    </div>
+                    <div style="text-align:center; background:#fff; padding:12px; border-radius:12px; color:#000;">
+                        <i class="fas fa-qrcode" style="font-size:3.5rem;"></i>
+                        <p style="margin:4px 0 0;font-size:0.72rem;font-weight:700;">SCAN AT SALEM SHALA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dash-grid dash-grid-3">
+                <div class="plan-card" id="planCardSeeker">
+                    <h4>Prana Seeker</h4>
+                    <div class="plan-price">$49 <span>/ mo</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 3 Shala Classes / Week</li>
+                        <li><i class="fas fa-check"></i> Hatha &amp; Yin Access</li>
+                        <li><i class="fas fa-check"></i> Organic Cork Mat</li>
+                    </ul>
+                    <button class="btn btn-outline" data-plan="Seeker" data-price="$49/mo">Switch to Seeker</button>
+                </div>
+                <div class="plan-card current" id="planCardSadhana">
+                    <h4>Sadhana Flow</h4>
+                    <div class="plan-price">$89 <span>/ mo</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Unlimited Shala &amp; 4K Streams</li>
+                        <li><i class="fas fa-check"></i> Monthly 3D Posture Scan</li>
+                        <li><i class="fas fa-check"></i> Weekly 432Hz Sound Bath</li>
+                    </ul>
+                    <button class="btn btn-primary" data-plan="Sadhana" data-price="$89/mo">Current Plan</button>
+                </div>
+                <div class="plan-card" id="planCardMoksha">
+                    <h4>Moksha Mastery</h4>
+                    <div class="plan-price">$149 <span>/ mo</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> All Sadhana Flow Perks</li>
+                        <li><i class="fas fa-check"></i> 4x Private Acharya Sessions</li>
+                        <li><i class="fas fa-check"></i> Custom Ayurveda Protocol</li>
+                    </ul>
+                    <button class="btn btn-outline" data-plan="Moksha" data-price="$149/mo">Upgrade to Moksha</button>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-videos">
+            <div class="dash-grid dash-grid-3">
+                <a href="404.html" class="dash-card vid-card" data-title="Sunrise Surya Vinyasa Flow" style="text-decoration:none;display:block;color:inherit;">
+                    <div class="vid-thumb"><img src="assets/yoga-vinyasa.webp" alt="Sunrise Surya Vinyasa"><div class="vid-play"><i class="fas fa-play"></i></div><span class="vid-duration">24:15</span></div>
+                    <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">Sunrise Surya Vinyasa Flow</h3>
+                    <p style="margin: 0; font-size: .85rem;">Acharya Ananya • Vinyasa Krama</p>
+                </a>
+                <a href="404.html" class="dash-card vid-card" data-title="Nadi Shodhana & Kumbhaka Lab" style="text-decoration:none;display:block;color:inherit;">
+                    <div class="vid-thumb"><img src="assets/yoga-pranayama.webp" alt="Pranayama Breathwork"><div class="vid-play"><i class="fas fa-play"></i></div><span class="vid-duration">18:40</span></div>
+                    <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">Nadi Shodhana &amp; Kumbhaka Lab</h3>
+                    <p style="margin: 0; font-size: .85rem;">Dr. Meera Krishnan • Pranayama</p>
+                </a>
+                <a href="404.html" class="dash-card vid-card" data-title="Lumbar Decompression Hatha" style="text-decoration:none;display:block;color:inherit;">
+                    <div class="vid-thumb"><img src="assets/yoga-hatha.webp" alt="Hatha Spine Alignment"><div class="vid-play"><i class="fas fa-play"></i></div><span class="vid-duration">32:10</span></div>
+                    <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">Lumbar Decompression Hatha</h3>
+                    <p style="margin: 0; font-size: .85rem;">Acharya Ananya • 3D Alignment</p>
+                </a>
+                <a href="404.html" class="dash-card vid-card" data-title="Mysore Primary Series Transitions" style="text-decoration:none;display:block;color:inherit;">
+                    <div class="vid-thumb"><img src="assets/yoga-ashtanga.webp" alt="Mysore Ashtanga"><div class="vid-play"><i class="fas fa-play"></i></div><span class="vid-duration">28:05</span></div>
+                    <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">Mysore Jump-Back Mechanics</h3>
+                    <p style="margin: 0; font-size: .85rem;">Guru Devendra • Ashtanga</p>
+                </a>
+                <a href="404.html" class="dash-card vid-card" data-title="Deep Yin Hip & Fascia Release" style="text-decoration:none;display:block;color:inherit;">
+                    <div class="vid-thumb"><img src="assets/yoga-yin.webp" alt="Deep Yin Yoga"><div class="vid-play"><i class="fas fa-play"></i></div><span class="vid-duration">35:00</span></div>
+                    <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">Deep Yin Hip &amp; Fascia Release</h3>
+                    <p style="margin: 0; font-size: .85rem;">Acharya Kavya • Restorative Yin</p>
+                </a>
+                <a href="404.html" class="dash-card vid-card" data-title="432Hz Tibetan Bowl Yoga Nidra" style="text-decoration:none;display:block;color:inherit;">
+                    <div class="vid-thumb"><img src="assets/yoga-soundbath.webp" alt="432Hz Sound Bath"><div class="vid-play"><i class="fas fa-play"></i></div><span class="vid-duration">40:00</span></div>
+                    <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">432Hz Tibetan Bowl Yoga Nidra</h3>
+                    <p style="margin: 0; font-size: .85rem;">Swami Siddharth • Sound Healing</p>
+                </a>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-notifications">
+            <div class="dash-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <h3 style="font-size: 1.15rem; color: #fff; margin: 0;">Sanctuary Notifications</h3>
+                    <button class="btn btn-outline" id="markAllRead" style="padding: 8px 18px; font-size: .85rem;">Mark all as read</button>
+                </div>
+                <div class="notif-item unread"><div class="notif-ico"><i class="fas fa-spa"></i></div><div><strong>Sunrise Shala Reminder</strong><p style="margin: 2px 0 0; font-size: .85rem;">Surya Vinyasa Krama starts tomorrow at 6:30 AM (Mat #07). <span style="color: var(--text-muted);">1 hr ago</span></p></div></div>
+                <div class="notif-item unread"><div class="notif-ico"><i class="fas fa-person-rays"></i></div><div><strong>3D Posture Scan Ready</strong><p style="margin: 2px 0 0; font-size: .85rem;">Your monthly spinal symmetry score improved to 94%! <span style="color: var(--text-muted);">4 hrs ago</span></p></div></div>
+                <div class="notif-item"><div class="notif-ico"><i class="fas fa-comment"></i></div><div><strong>Note from Acharya Ananya</strong><p style="margin: 2px 0 0; font-size: .85rem;">"Wonderful stability in Ardha Chandrasana today!" <span style="color: var(--text-muted);">Yesterday</span></p></div></div>
+                <div class="notif-item"><div class="notif-ico"><i class="fas fa-video"></i></div><div><strong>New 432Hz Sound Bath Added</strong><p style="margin: 2px 0 0; font-size: .85rem;">Swami Siddharth uploaded a new 40-minute Yoga Nidra recording. <span style="color: var(--text-muted);">2 days ago</span></p></div></div>
+            </div>
+        </section>
+
+        
+        <section class="dash-panel" id="section-settings">
+            <div class="dash-grid dash-grid-2" style="align-items: stretch;">
+                <div class="dash-card" style="display: flex; flex-direction: column;">
+                    <div class="dash-card-img" style="height: 180px; margin-bottom: 16px;">
+                        <img src="assets/yoga-nutrition.webp" alt="Ayurvedic Dosha & Nutrition" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 18px;">Practitioner Profile &amp; Dosha</h3>
+                    <form id="settingsForm" style="display: flex; flex-direction: column; flex: 1;">
+                        <div class="form-group"><label>Full Name</label><input type="text" id="settingsName" placeholder="Your full name"></div>
+                        <div class="form-group"><label>Email Address</label><input type="email" id="settingsEmail" placeholder="you@stackly.com"></div>
+                        <div class="form-group"><label>Phone Number</label><input type="tel" id="settingsPhone" placeholder="+91 98765 43210"></div>
+                        <div class="form-group"><label>Primary Yoga Path</label>
+                            <select id="settingsSport">
+                                <option>Classical Hatha Alignment</option>
+                                <option>Surya Vinyasa Flow</option>
+                                <option>Mysore Ashtanga Series</option>
+                                <option>Pranayama &amp; Breathwork</option>
+                                <option>Aerial Silk Decompression</option>
+                                <option>432Hz Sound Healing</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: auto;">Save Profile Changes</button>
+                    </form>
+                </div>
+                <div class="dash-card" style="display: flex; flex-direction: column;">
+                    <div class="dash-card-img" style="height: 180px; margin-bottom: 16px;">
+                        <img src="assets/yoga-sanctuary.webp" alt="Sanctuary Mindfulness Environment" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 14px;"><i class="fas fa-sliders highlight"></i> Mindfulness Reminders</h3>
+                    <div style="display:flex; flex-direction:column; gap:16px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <div><strong style="color:#fff;">Brahma Muhurta Sunrise Alert</strong><p style="margin:0;font-size:0.8rem;color:var(--text-muted);">Gentle chime 45 mins before morning shala</p></div>
+                            <label class="switch-toggle"><input type="checkbox" checked><span class="switch-slider"></span></label>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <div><strong style="color:#fff;">Midday Pranayama Breath Bell</strong><p style="margin:0;font-size:0.8rem;color:var(--text-muted);">2-minute Nadi Shodhana reminder at 1:00 PM</p></div>
+                            <label class="switch-toggle"><input type="checkbox" checked><span class="switch-slider"></span></label>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <div><strong style="color:#fff;">Apple Health &amp; HRV Sync</strong><p style="margin:0;font-size:0.8rem;color:var(--text-muted);">Sync mindfulness minutes &amp; sleep recovery</p></div>
+                            <label class="switch-toggle"><input type="checkbox" checked><span class="switch-slider"></span></label>
+                        </div>
+                    </div>
+                    <div style="margin-top: 18px; padding: 14px; background: rgba(230, 184, 92, 0.08); border-radius: 12px; border: 1px solid rgba(230, 184, 92, 0.2);">
+                        <div style="display:flex; align-items:center; gap:10px; margin-bottom: 6px;">
+                            <i class="fas fa-spa highlight"></i>
+                            <strong style="color:#fff; font-size:0.9rem;">Ayurvedic Constitution (Prakriti)</strong>
+                        </div>
+                        <p style="margin:0; font-size:0.82rem; color:var(--text-muted);">Assigned Dosha Archetype: <span style="color:var(--accent); font-weight:700;">Pitta-Vata Harmonized</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+</div>
+
+<div class="video-player-modal" id="trainingVideoModal">
+    <div class="video-modal-content">
+        <div class="close-modal" id="closeTrainingVideo"><i class="fas fa-times"></i></div>
+        <video id="trainingVideoPlayer" controls></video>
+    </div>
+</div>
+
+<div class="modal-backdrop" id="planModal">
+    <div class="modal-card">
+        <div style="font-size: 2.6rem; color: var(--accent); margin-bottom: 14px;"><i class="fas fa-circle-check"></i></div>
+        <h3 id="planModalTitle">Confirm Membership Plan</h3>
+        <p id="planModalText">Are you sure you want to switch your sanctuary membership plan?</p>
+        <div class="modal-actions">
+            <button class="btn btn-outline" id="cancelPlanBtn" style="padding: 12px 26px;">Cancel</button>
+            <button class="btn btn-primary" id="confirmPlanBtn" style="padding: 12px 26px;">Yes, Confirm</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-backdrop" id="logoutModal">
+    <div class="modal-card">
+        <div style="font-size: 2.6rem; color: #ff5a5a; margin-bottom: 14px;"><i class="fas fa-right-from-bracket"></i></div>
+        <h3>Leaving the Sanctuary?</h3>
+        <p>You're about to sign out of your Stackly Member account.</p>
+        <div class="modal-actions">
+            <button class="btn btn-outline" id="cancelLogout" style="padding: 12px 26px;">Stay Signed In</button>
+            <button class="btn btn-primary" id="confirmLogout" style="padding: 12px 26px;">Yes, Log Out</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+(function () {
+    var user = window.StacklyAuth.getUser();
+    if (!user || !user.loggedIn) {
+        user = {
+            name: 'Ananya Sundaram',
+            email: 'ananya@stackly.com',
+            phone: '+91 98765 43210',
+            sport: 'Surya Vinyasa Flow',
+            tier: 'Sadhana Flow',
+            plan: 'Sadhana Flow',
+            role: 'member',
+            loggedIn: true
+        };
+    }
+    var displayName = user.name || user.fullName || 'Practitioner';
+    var displayEmail = user.email || 'seeker@stackly.com';
+    var displayPlan = (user.tier || user.plan || 'Sadhana Flow') + (String(user.tier || user.plan || '').toLowerCase().indexOf('plan') !== -1 ? '' : ' Plan');
+    document.querySelectorAll('.js-user-name').forEach(function (el) { el.textContent = displayName; });
+    document.querySelectorAll('.js-user-email').forEach(function (el) { el.textContent = displayEmail; });
+    document.querySelectorAll('.js-user-plan').forEach(function (el) { el.textContent = displayPlan; });
+    document.querySelectorAll('.js-user-initials').forEach(function (el) {
+        el.textContent = displayName.trim().split(/\s+/).map(function (w) { return w[0]; }).slice(0, 2).join('').toUpperCase() || 'P';
+    });
+    var settingsName = document.getElementById('settingsName');
+    var settingsEmail = document.getElementById('settingsEmail');
+    var settingsPhone = document.getElementById('settingsPhone');
+    if (settingsName) settingsName.value = displayName;
+    if (settingsEmail) settingsEmail.value = displayEmail;
+    if (settingsPhone) settingsPhone.value = user.phone || '+91 98765 43210';
+
+    var panels = document.querySelectorAll('.dash-panel');
+    var sidebar = document.getElementById('dashSidebar');
+    var overlay = document.getElementById('dashOverlay');
+    function animateBars(scope) {
+        if (!scope) return;
+        scope.querySelectorAll('.bar-fill').forEach(function (el) {
+            var target = el.getAttribute('data-value') || '0';
+            el.style.width = '0%';
+            setTimeout(function () { el.style.width = target + '%'; }, 80);
+        });
+    }
+    window.showSection = function (id) {
+        if (!document.getElementById('section-' + id)) return;
+        panels.forEach(function (p) { p.classList.toggle('active', p.id === 'section-' + id); });
+        document.querySelectorAll('.dash-nav-btn[data-target]').forEach(function (b) {
+            b.classList.toggle('active', b.getAttribute('data-target') === id);
+        });
+        if (sidebar) sidebar.classList.remove('open');
+        if (overlay) overlay.classList.remove('show');
+        document.body.classList.remove('dash-sidebar-open');
+        document.documentElement.classList.remove('dash-sidebar-open');
+        if (typeof window.closeDashSidebar === 'function') window.closeDashSidebar();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        var activePanel = document.getElementById('section-' + id);
+        animateBars(activePanel);
+        history.replaceState(null, '', '#' + id);
+    };
+    document.querySelectorAll('.dash-nav-btn[data-target], .dash-bell[data-target], .qa-btn[data-target], [data-target]').forEach(function (b) {
+        b.addEventListener('click', function () { window.showSection(b.getAttribute('data-target')); });
+    });
+    var initial = (location.hash || '#dashboardHome').replace('#', '');
+    window.showSection(document.getElementById('section-' + initial) ? initial : 'dashboardHome');
+
+    if (typeof window.initMobileSidebar === 'function') {
+        window.initMobileSidebar();
+    }
+
+    var vidModal = document.getElementById('trainingVideoModal');
+    var vidPlayer = document.getElementById('trainingVideoPlayer');
+    document.querySelectorAll('.vid-card[data-video]').forEach(function (card) {
+        card.addEventListener('click', function () {
+            vidPlayer.src = card.getAttribute('data-video');
+            vidModal.classList.add('active');
+            vidPlayer.play().catch(function () {});
+        });
+    });
+    function closeVideoModal() {
+        vidModal.classList.remove('active');
+        vidPlayer.pause();
+        vidPlayer.currentTime = 0;
+    }
+    document.getElementById('closeTrainingVideo').addEventListener('click', closeVideoModal);
+    vidModal.addEventListener('click', function (e) { if (e.target === vidModal) closeVideoModal(); });
+
+    var planModal = document.getElementById('planModal');
+    var planModalTitle = document.getElementById('planModalTitle');
+    var planModalText = document.getElementById('planModalText');
+    var confirmPlanBtn = document.getElementById('confirmPlanBtn');
+    var selectedPlan = '';
+    var selectedPrice = '';
+    document.querySelectorAll('[data-plan]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            selectedPlan = btn.getAttribute('data-plan');
+            selectedPrice = btn.getAttribute('data-price');
+            planModalTitle.textContent = 'Switch to ' + selectedPlan + ' Plan';
+            planModalText.textContent = 'Are you sure you want to switch to the ' + selectedPlan + ' membership plan for ' + selectedPrice + '?';
+            planModal.classList.add('show');
+        });
+    });
+    document.getElementById('cancelPlanBtn').addEventListener('click', function () { planModal.classList.remove('show'); });
+    confirmPlanBtn.addEventListener('click', function () {
+        var current = window.StacklyAuth.getUser() || user;
+        current.tier = selectedPlan;
+        current.plan = selectedPlan;
+        window.StacklyAuth.setUser(current);
+        document.querySelectorAll('.js-user-plan').forEach(function (el) { el.textContent = selectedPlan + ' Plan'; });
+        document.querySelectorAll('.plan-card').forEach(function (c) { c.classList.remove('current'); });
+        var newCard = document.getElementById('planCard' + selectedPlan);
+        if (newCard) newCard.classList.add('current');
+        planModal.classList.remove('show');
+        window.KickToast.show('You are now on the ' + selectedPlan + ' Plan (' + selectedPrice + ').', 'success', 'Plan Updated');
+    });
+
+    var settingsForm = document.getElementById('settingsForm');
+    if (settingsForm) {
+        settingsForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var current = window.StacklyAuth.getUser() || user;
+            if (settingsName && settingsName.value.trim()) current.name = settingsName.value.trim();
+            if (settingsEmail && settingsEmail.value.trim()) current.email = settingsEmail.value.trim();
+            window.StacklyAuth.setUser(current);
+            document.querySelectorAll('.js-user-name').forEach(function (el) { el.textContent = current.name; });
+            document.querySelectorAll('.js-user-email').forEach(function (el) { el.textContent = current.email; });
+            window.KickToast.show('Your practitioner profile and dosha preferences have been saved.', 'success', 'Profile Updated');
+        });
+    }
+
+    var markAllBtn = document.getElementById('markAllRead');
+    if (markAllBtn) {
+        markAllBtn.addEventListener('click', function () {
+            document.querySelectorAll('.notif-item.unread').forEach(function (n) { n.classList.remove('unread'); });
+            window.KickToast.show('All notifications marked as read.', 'info', 'Inbox Cleared');
+        });
+    }
+})();
+</script>
+</body>
+</html>
