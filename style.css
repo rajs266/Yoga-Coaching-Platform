@@ -72,9 +72,7 @@ body {
   width: 100%;
 }
 
-/* ==========================================================================
-   Logo Theme Filter (Shifts Stackly logo.webp & top-logo.webp to Warm Gold)
-   ========================================================================== */
+
 .nav-logo img,
 .mobile-menu-header img,
 .auth-brand img[alt*="Stackly"],
@@ -94,9 +92,7 @@ footer img[alt*="Stackly"],
   filter: brightness(1.15) drop-shadow(0 0 14px rgba(230, 184, 92, 0.65)) !important;
 }
 
-/* ==========================================================================
-   Ultimate 3D Multi-Layer Custom Animation Cursor & Particle Trail
-   ========================================================================== */
+
 .cursor-dot,
 .cursor-outline,
 .cursor-aura {
@@ -172,9 +168,7 @@ footer img[alt*="Stackly"],
   100% { opacity: 0; transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% + var(--dy, -24px))) scale(0.1); }
 }
 
-/* ==========================================================================
-   Typography & Base Utilities
-   ========================================================================== */
+
 h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; margin-bottom: 1rem; }
 h1 { font-size: 3.8rem; }
 h2 { font-size: 2.7rem; }
@@ -251,9 +245,7 @@ ul { list-style: none; }
 .btn-outline:hover::before { width: 100%; }
 .btn-outline:hover i { transform: translate(4px, -4px); color: var(--text-dark) !important; }
 
-/* ==========================================================================
-   Navbar (Sticky / Fixed at Top, Never Hides on Scroll)
-   ========================================================================== */
+
 .navbar {
   position: fixed !important;
   top: 0 !important;
@@ -330,9 +322,7 @@ section { padding: var(--section-padding); position: relative; }
 .shape-circle { border-radius: 50%; overflow: hidden; }
 .shape-bottom-half { border-bottom-left-radius: 100px; border-bottom-right-radius: 100px; }
 
-/* ==========================================================================
-   Home Hero: 4-Image Slideshow + Corner Outlined Font Vertical Bottom-to-Top
-   ========================================================================== */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -373,7 +363,7 @@ section { padding: var(--section-padding); position: relative; }
   z-index: -1;
 }
 
-/* Corner Outlined Border-Only Font Vertical Bottom-to-Top Slideshow (No Border Box, Continuous Smooth Marquee) */
+
 .corner-outline-slideshow {
   position: absolute;
   z-index: 2;
@@ -452,7 +442,7 @@ section { padding: var(--section-padding); position: relative; }
   100% { transform: translateY(-50%); }
 }
 
-/* Vertical Side Corner Continuous Bottom-to-Top Stroke Marquee */
+
 .hero-side-stroke-rail {
   position: absolute;
   top: 110px;
@@ -488,7 +478,7 @@ section { padding: var(--section-padding); position: relative; }
   100% { transform: translateY(-50%); }
 }
 
-/* Hero Slideshow Controls / Indicators */
+
 .hero-slide-controls {
   display: inline-flex;
   align-items: center;
@@ -542,9 +532,7 @@ section { padding: var(--section-padding); position: relative; }
   margin-left: 6px;
 }
 
-/* ==========================================================================
-   3D Cards & Strictly Same Hover Effects from Reference
-   ========================================================================== */
+
 .card {
   background-color: var(--bg-card);
   border-radius: 15px;
@@ -1789,7 +1777,7 @@ input:checked + .switch-slider { background-color: var(--accent); }
 input:checked + .switch-slider:before { transform: translateX(22px); background-color: var(--bg-darker); }
 
 /* ==========================================================================
-   Preloader (Sacred Mandala & Orbiting Prana Orb)
+   Preloader 
    ========================================================================== */
 html.preloader-active,
 html.preloader-active body {
@@ -1888,9 +1876,7 @@ html.preloader-active body {
 @keyframes saTagPulse { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
 @keyframes saLoadFill { to { width: 100%; } }
 
-/* ==========================================================================
-   Bar Fills & Compact Cards (Admin & Customer Dashboards)
-   ========================================================================== */
+
 .bar-fill.bar-fill-emerald { background: linear-gradient(90deg, #10b981, #a3e635) !important; box-shadow: 0 0 12px rgba(16, 185, 129, 0.45); }
 .bar-fill.bar-fill-warning { background: linear-gradient(90deg, #f59e0b, #ef4444) !important; box-shadow: 0 0 12px rgba(245, 158, 11, 0.45); }
 .bar-fill.bar-fill-cyan { background: linear-gradient(90deg, #06b6d4, #3b82f6) !important; box-shadow: 0 0 12px rgba(6, 182, 212, 0.45); }
@@ -1972,9 +1958,7 @@ html.preloader-active body {
 .forgot-password-link { color: var(--accent); font-weight: 600; text-decoration: none; }
 .forgot-password-link:hover { color: var(--accent-hover); text-decoration: underline; }
 
-/* ==========================================================================
-   100% Mobile, iPhone & Tablet Responsive Rules (Compact Section Heights)
-   ========================================================================== */
+
 @media (max-width: 992px) {
   h1 { font-size: 2.9rem; }
   h2 { font-size: 2.15rem; }
@@ -2118,9 +2102,7 @@ html.preloader-active body {
   .sa-preloader__mark img { width: 42px; }
 }
 
-/* ==========================================================================
-   Page-Specific Component Styles (Home, Pricing, Blog, Contact, 404, Dashboards)
-   ========================================================================== */
+
 .about-redesign {
   background: #ffffff;
   border-radius: 30px;
@@ -2215,7 +2197,7 @@ html.preloader-active body {
   min-height: 360px;
 }
 
-/* Pricing Membership Cards */
+
 .membership-section {
   background: radial-gradient(ellipse at top, #0f3d33 0%, #07221d 60%, #041512 100%);
   position: relative;
@@ -2255,7 +2237,7 @@ html.preloader-active body {
   z-index: 1;
 }
 
-/* Light Membership Cards for Light Section */
+
 .membership-section.alt .membership-card {
   background: #ffffff;
   border: 1px solid rgba(7, 34, 29, 0.12);
@@ -2293,7 +2275,7 @@ html.preloader-active body {
   box-shadow: 0 22px 50px rgba(230, 184, 92, 0.22), 0 8px 20px rgba(7, 34, 29, 0.08);
 }
 
-/* Popular Card in Light Section */
+
 .membership-section.alt .membership-card.popular-card {
   background: #ffffff;
   border: 2px solid var(--accent);
@@ -2406,7 +2388,7 @@ html.preloader-active body {
   flex-shrink: 0;
 }
 
-/* Blog Page Components */
+
 .featured-post {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
@@ -2580,7 +2562,7 @@ html.preloader-active body {
   background: rgba(230, 184, 92, 0.09);
 }
 
-/* Contact Page Components */
+
 .contact-tile {
   background: linear-gradient(155deg, #0d382f 0%, #061d18 100%);
   border: 1px solid rgba(230, 184, 92, 0.25);
@@ -2673,7 +2655,7 @@ html.preloader-active body {
   background: #061d18;
 }
 
-/* 404 Error Page */
+
 .error-hero {
   min-height: 100vh;
   display: flex;
@@ -2734,7 +2716,7 @@ html.preloader-active body {
   filter: drop-shadow(0 0 15px rgba(230, 184, 92, 0.4));
 }
 
-/* Dashboard Utility Classes */
+
 .dash-bell {
   position: relative; width: 42px; height: 42px; border-radius: 50%;
   background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);

@@ -13,10 +13,10 @@
   }
   window.setTimeout(hidePreloader, DURATION);
 
-  // Handle browser back/forward navigation (bfcache)
+  
   window.addEventListener('pageshow', function (event) {
     hidePreloader();
-    // Remove loading state from submit buttons if user navigates back
+    
     document.querySelectorAll('.btn.loading, button.loading').forEach(function (btn) {
       btn.classList.remove('loading');
     });
@@ -24,9 +24,7 @@
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* ==========================================================================
-     1. Ultimate 3D Multi-Layer Animation Cursor + Prana Particle Trail
-     ========================================================================== */
+  
   const isTouch = window.matchMedia('(max-width: 768px)').matches || ('ontouchstart' in window);
   if (!isTouch) {
     const cursorAura = document.createElement('div');
@@ -89,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     bindHoverTargets();
 
-    /* 3D Interactive Tilt on Cards */
+    
     const tiltCards = document.querySelectorAll(
       '.facility-card, .coach-card, .feature-tile, .stat-chip, .card-light:not(.pricing-card), .membership-card'
     );
@@ -108,9 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ==========================================================================
-     2. Navbar Scroll & Mobile Drawer
-     ========================================================================== */
+  
   const navbar = document.querySelector('.navbar');
   if (navbar) {
     window.addEventListener('scroll', () => {
@@ -146,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Active Nav Link */
+  
   let currentPath = window.location.pathname.split('/').pop();
   if (!currentPath || currentPath === '') currentPath = 'index.html';
   document.querySelectorAll('.nav-links > a').forEach((link) => {
@@ -155,9 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     else link.classList.remove('active');
   });
 
-  /* ==========================================================================
-     3. Scroll Reveal IntersectionObserver
-     ========================================================================== */
+  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -172,9 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .querySelectorAll('.reveal, .anim-fade-up, .anim-slide-left, .anim-slide-right, .anim-zoom-in')
     .forEach((el) => observer.observe(el));
 
-  /* ==========================================================================
-     4. Home Page 4-Image Slideshow (#heroSlideshow)
-     ========================================================================== */
+  
   const heroSlides = document.querySelectorAll('.hero-slide');
   const heroDots = document.querySelectorAll('.hero-slide-dot');
   const heroSlideCaption = document.getElementById('heroSlideCaption');
@@ -204,9 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ==========================================================================
-     5. Interactive Pranayama Breathwork Pacer (if present on page)
-     ========================================================================== */
+  
   const breathOrb = document.getElementById('breathOrb');
   const breathLabel = document.getElementById('breathPhaseLabel') || document.getElementById('breathLabel');
   const breathTimerText = document.getElementById('breathTimerLabel') || document.getElementById('breathTimerText');
@@ -255,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
       syncPillsAndProgress();
     };
 
-    // Initial idle state: Ready on Inhale 4s, button shows Play Breath Guide
+    
     updateBreathUI();
 
     setInterval(() => {
@@ -301,9 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* ==========================================================================
-     6. Sanctuary Video Modal with Interactive Guided Yoga Flow Visualizer
-     ========================================================================== */
   const playBtn = document.querySelector('.play-btn-wrapper');
   const videoModal = document.getElementById('videoModal');
   window.openVideoModal = () => {
@@ -332,9 +319,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-/* ==========================================================================
-   7. StacklyAuth, KickToast, StacklyForms, StacklySelect
-   ========================================================================== */
 window.StacklyAuth = {
   KEY: 'stackly_user',
   getUser: function () {
@@ -465,16 +449,16 @@ window.StacklySelect = {
     var vw = Math.max(320, docEl.clientWidth || window.innerWidth || 360);
     var vh = Math.max(320, window.innerHeight || docEl.clientHeight || 600);
 
-    // Available width strictly inside screen boundaries
+    
     var maxSafeW = Math.max(100, vw - pad * 2);
-    // Menu width defaults to button width, bounded by screen width
+    
     var width = Math.min(rect.width, maxSafeW);
     if (width < 200 && maxSafeW >= 200) width = Math.min(260, maxSafeW);
 
-    // Initial left aligned with button
+    
     var left = rect.left;
 
-    // Strict boundary checks: never let menu go beyond right or left edge of screen
+    
     if (left + width > vw - pad) {
       left = vw - pad - width;
     }
